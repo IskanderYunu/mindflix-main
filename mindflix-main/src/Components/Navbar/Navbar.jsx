@@ -10,11 +10,16 @@ import profile_icon from "../../Assets/jack.png";
 
 //ADD LOGIN |SIGNUP | My Dashboard BUTTONS delete old icons on the right
 
-const Navbar = () => {
+const Navbar = ({ setSidebar }) => {
   return (
     <nav className="flex-div">
       <div className="nav-left flex-div">
-        <img className="menu-icon" src={menu_icon} alt="" />
+        <img
+          className="menu-icon"
+          onClick={() => setSidebar((prev) => (prev === false ? true : false))}
+          src={menu_icon}
+          alt=""
+        />
         {/* PUT MINDFLIX logo with your own and NAME */}
         <img className="logo" src={logo_mind} alt="" />
         <h1>MindFlix</h1>

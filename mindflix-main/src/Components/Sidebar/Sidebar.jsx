@@ -15,9 +15,9 @@ import tom from "../../assets/tom.png";
 import megan from "../../assets/megan.png";
 
 //!!!ADD THE RIGHT ICONS AND DIFFERENT CATEGORIES FOR EDUCTION
-const Sidebar = () => {
+const Sidebar = ({ sidebar }) => {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${sidebar ? "" : "small-sidebar"}`}>
       <div className="sortcut-link">
         <div className="side-link">
           <img src={home} alt="" />
