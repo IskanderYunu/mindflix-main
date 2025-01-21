@@ -6,7 +6,6 @@ import Home from "./Pages/Home/Home";
 import Signup from "./Pages/Signup/Signup";
 import Login from "./Pages/Login/Login";
 import Video from "./Pages/Video/Video";
-import Sidebar from "./Components/Sidebar/Sidebar";
 
 const App = () => {
   const [sidebar, setSidebar] = useState(true);
