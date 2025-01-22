@@ -1,0 +1,64 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+/* HANDLES VIDEO SEARCH AND ADD BUTTON */
+.add-video-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.add-video-form input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.add-video-form button {
+  padding: 10px 20px;
+  background-color: #a72e5c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-video-form button:hover {
+  background-color: #8d1f86;
+}
+
+/* HANDLES VIDEO GRID */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.video-card {
+  background: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.video-card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.video-card button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.video-card button:hover {
+  background-color: #c82333;
+}
