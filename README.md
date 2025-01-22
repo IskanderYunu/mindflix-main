@@ -15,7 +15,7 @@ This web application allows users to browse, add, and manage videos. Users can s
 ** Following Accounts
 ** Creating Playlists
 ** Navigations Between Categories
-** Creating User Authentication 
+** User Authentication Updates for Current Users
 
 ### Prerequisites
 
