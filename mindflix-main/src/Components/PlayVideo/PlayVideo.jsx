@@ -1,7 +1,7 @@
 //THIS SITS ON THE HOME PAGE AND PLAYS THE VIDEO IN THE BACKGROUND
 import React from "react";
 import "./PlayVideo.css";
-import video1 from "../../assets/video.mp4";
+import video2 from "../../assets/video2.mp4";
 import like from "../../assets/like.png";
 import dislike from "../../assets/dislike.png";
 import share from "../../assets/share.png";
@@ -12,7 +12,7 @@ import user_profile from "../../assets/user_profile.jpg";
 const PlayVideo = () => {
   return (
     <div className="play-video">
-      <video src={video1} controls autoPlay muted></video>
+      <video src={video2} controls autoPlay muted></video>
       <h3>Best Ever Video!</h3>
       <div className="play-video-info">
         <p>1523 Views &bull; 2 days ago</p>
