@@ -14,12 +14,20 @@ const Navbar = ({ setSidebar }) => {
   return (
     <nav className="flex-div">
       <div className="nav-left flex-div">
-        <img
-          className="menu-icon"
-          onClick={() => setSidebar((prev) => (prev === false ? true : false))}
-          src={menu_icon}
-          alt=""
-        />
+        {/* Removes the menu icon for SIDEBAR on certain pages */}
+        {location.pathname !== "/signup" &&
+          location.pathname !== "/login" &&
+          location.pathname !== "/dashboard" && (
+            <img
+              className="menu-icon"
+              onClick={() =>
+                setSidebar((prev) => (prev === false ? true : false))
+              }
+              src={menu_icon}
+              alt=""
+            />
+          )}
+        {/* Makes sure to link back to homepage */}
         <Link to="/">
           <img className="logo" src={logo_mind} alt="" />
         </Link>
@@ -27,6 +35,8 @@ const Navbar = ({ setSidebar }) => {
           <h1>MindFlix</h1>
         </Link>
       </div>
+
+      {/* Helps to not show the search bar on certain pages */}
       {location.pathname !== "/signup" &&
         location.pathname !== "/login" &&
         location.pathname !== "/dashboard" && (
@@ -38,7 +48,7 @@ const Navbar = ({ setSidebar }) => {
           </div>
         )}
 
-      {/* might not need all of these clean up later */}
+      {/* ADD LOGIN |SIGNUP | My Dashboard BUTTONS */}
       <div className="nav-right flex-div">
         <Link to="/signup">
           <button className="nav-button">SignUp</button>

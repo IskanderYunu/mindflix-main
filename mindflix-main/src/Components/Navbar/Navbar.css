@@ -36,7 +36,7 @@ nav {
 }
 /* Buttons styles for the Navbar */
 .nav-right .nav-button {
-  background-color: #a72e5c; /* Change to your preferred color */
+  background-color: #a72e5c; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -47,7 +47,7 @@ nav {
 }
 
 .nav-right .nav-button:hover {
-  background-color: #0056b3; /* Change to your preferred hover color */
+  background-color: #8d1f86; /
 }
 
 /* OLD BUTTONS
