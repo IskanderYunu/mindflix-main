@@ -11,6 +11,11 @@ This web application allows users to browse, add, and manage videos. Users can s
 - Play videos within the dashboard
 - Delete videos from the dashboard
 
+## In-Development
+** Following Accounts
+** Creating Playlists
+** Navigations Between Categories
+
 ### Prerequisites
 
 - Node.js and npm installed on your machine
