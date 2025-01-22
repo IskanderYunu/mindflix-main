@@ -5,7 +5,7 @@ This web application allows users to browse, add, and manage videos. Users can s
 
 ## Features
 - Browse vidoes by categories: Education | Music | How-to & Style | Science & Tech | Entertainment. 
-- User authentication (Sign Up, Login)
+- Sign Up, Login
 - Add YouTube videos by URL
 - View video thumbnails and titles
 - Play videos within the dashboard
@@ -15,6 +15,7 @@ This web application allows users to browse, add, and manage videos. Users can s
 ** Following Accounts
 ** Creating Playlists
 ** Navigations Between Categories
+** Creating User Authentication 
 
 ### Prerequisites
 
