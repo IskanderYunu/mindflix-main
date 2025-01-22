@@ -34,7 +34,23 @@ nav {
 .nav-middle .search-box img {
   width: 25px;
 }
+/* Buttons styles for the Navbar */
+.nav-right .nav-button {
+  background-color: #a72e5c; /* Change to your preferred color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
+.nav-right .nav-button:hover {
+  background-color: #0056b3; /* Change to your preferred hover color */
+}
+
+/* OLD BUTTONS
 .nav-right img {
   width: 50px;
   margin-right: 25px;
@@ -42,4 +58,4 @@ nav {
 .nav-right .user-icon {
   width: 65px;
   border-radius: 50%;
-}
+} */
