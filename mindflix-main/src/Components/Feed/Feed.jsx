@@ -1,24 +1,19 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./Feed.css";
-import thumbnail1 from "../../Assets/thumbnail1.png";
-import thumbnail2 from "../../Assets/thumbnail2.png";
-import thumbnail3 from "../../Assets/thumbnail3.png";
-import thumbnail4 from "../../Assets/thumbnail4.png";
-import thumbnail5 from "../../Assets/thumbnail5.png";
-import thumbnail6 from "../../Assets/thumbnail6.png";
-import thumbnail7 from "../../Assets/thumbnail7.png";
-import thumbnail8 from "../../Assets/thumbnail8.png";
+
 // LINKS THE VIDEOS TO THE VIDEO PAGE
 import { Link } from "react-router";
 import { API_KEY } from "../../data.js";
+import { value_converter } from "../../data.js";
+import moment from "moment";
 
 export const Feed = ({ category }) => {
   // creates state variable to store the data coming from the API
   const [data, setData] = useState([]);
 
   const fetchData = async () => {
-    const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryID=${category}&key=${API_KEY}`;
+    const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryID=${category}&key=${API_KEY}`;
     // await fetch the API + response.json + another promise + items are stored in data
     await fetch(videoList_url)
       .then((response) => response.json())
@@ -39,9 +34,12 @@ export const Feed = ({ category }) => {
             className="card"
           >
             <img src={item.snippet.thumbnails.medium.url} alt="" />
-            <h2>Best Channel EVER!</h2>
-            <h3>Greatstack</h3>
-            <p>15k views &bull; 2 days ago</p>
+            <h2>{item.snippet.title}</h2>
+            <h3>{item.snippet.channelTitle}</h3>
+            <p>
+              {value_converter(item.statistics.viewCount)} views &bull;{" "}
+              {moment(item.snippet.publishedAt).fromNow()}
+            </p>
           </Link>
         );
       })}
